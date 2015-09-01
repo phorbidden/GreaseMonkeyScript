@@ -1,0 +1,22 @@
+// ==UserScript==
+// @name        googlePlus_img_h0
+// @namespace   test
+// @include     http://*.googleusercontent.com/*
+// @include     https://*.googleusercontent.com/*
+// @run-at      document-start
+// @author      phorbidden
+// @license     GPL 3.0	
+// @version     0.1
+// @grant       none
+// @description Redirect googlePlus image to h0 originalSize
+// ==/UserScript==
+
+var str = content.document.location + "";
+var splited = str.split("/");
+
+if (splited.indexOf("h0") == -1) {
+
+	var url = splited[0] + "/" + splited[1] + "/" + splited[2] + "/" + splited[3] + "/" + splited[4] + "/" + splited[5] + "/" + splited[6] + "/h0/";
+
+	window.location.replace( url );
+}
