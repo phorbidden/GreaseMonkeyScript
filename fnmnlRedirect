@@ -1,0 +1,19 @@
+// ==UserScript==
+// @name         fnmnl redirect
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       phorbidden
+// @match        http://fnmnl.tv/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    var url = location.href;
+    var url2 = '?articleview=more';
+if (url.endsWith(url2)){}
+else{
+    location.href = url + '?articleview=more';
+}
+})();
